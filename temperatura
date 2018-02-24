@@ -1,0 +1,27 @@
+import sun.applet.Main
+import scala.collection.mutable.ArrayBuffer
+
+
+object temperatura {
+  
+  
+  def main(args: Array[String]): Unit = {
+    var b= ArrayBuffer[Int]()
+    println("Agrege la primera temperatura:")
+    var eleccion="s"
+    while(eleccion.equals("s")){
+      b+=readInt()
+      println("¿Quiere agregar otro elemento:\ns:si\nn:no?")
+      eleccion=readLine()
+    }
+      
+      while(b.length>1){
+      if(b(0)>=0)
+      b.remove(0)
+      else
+      b.trimEnd(b.length-1) 
+    }
+      
+     println(b(0))
+  }
+}
